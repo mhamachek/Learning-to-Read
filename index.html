@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter Practice Grid</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="settings-panel">
+            <button id="settingsToggle">⚙️ Settings</button>
+            <div id="settingsContent" class="hidden">
+                <div class="grid-size">
+                    <h3>Grid Size:</h3>
+                    <select id="gridSize">
+                        <option value="10">10 (1 row)</option>
+                        <option value="20">20 (2 rows)</option>
+                        <option value="30">30 (3 rows)</option>
+                        <option value="40">40 (4 rows)</option>
+                        <option value="50">50 (5 rows)</option>
+                    </select>
+                </div>
+                
+                <div class="font-selection">
+                    <h3>Font:</h3>
+                    <select id="fontSelect">
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Arial">Arial</option>
+                        <option value="Comic Sans MS">Comic Sans</option>
+                    </select>
+                </div>
+
+                <div class="letter-selection">
+                    <h3>Letter Selection:</h3>
+                    <div class="selection-mode">
+                        <input type="radio" id="randomMode" name="mode" value="random" checked>
+                        <label for="randomMode">Random Letters</label>
+                        <input type="radio" id="customMode" name="mode" value="custom">
+                        <label for="customMode">Custom Selection</label>
+                    </div>
+                    
+                    <div id="letterCheckboxes" class="hidden">
+                        <!-- Will be populated by JavaScript -->
+                    </div>
+
+                    <div class="common-mistakes">
+                        <button id="commonMistakes">Practice Common Mistakes (H, W, X)</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-container" id="letterGrid"></div>
+
+        <div class="controls">
+            <button id="restart">Restart</button>
+        </div>
+
+        <div id="stats" class="hidden">
+            <h3>Session Statistics</h3>
+            <p>Correct: <span id="correctCount">0</span></p>
+            <p>Incorrect: <span id="incorrectCount">0</span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
